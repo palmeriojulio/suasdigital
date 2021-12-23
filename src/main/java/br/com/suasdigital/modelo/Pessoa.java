@@ -7,7 +7,7 @@ public class Pessoa implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private long idpessoa;
-	private int escolaridade;
+	private String escolaridade;
 	private String nome;
 	private String rg;
 	private String cpf;
@@ -22,10 +22,16 @@ public class Pessoa implements Serializable {
 	private String logradouro;
 	private String numero;
 	private String complemento;	
+	private String bairro;
+	private String cep;
+	private String cidade;
+	private String ufcidade;	
+	private String email;
+	private String telefonecelular;
 	
 	public Pessoa() {}
 
-	public Pessoa(long idpessoa, int escolaridade, String nome, String rg, String cpf, String datanascimento,
+	public Pessoa(long idpessoa, String escolaridade, String nome, String rg, String cpf, String datanascimento,
 			String naturalidade, String ufnascimento, String sexo, String foto, String estadocivil, String profissao,
 			String zonamoradia, String logradouro, String numero, String complemento, String bairro, String cep,
 			String cidade, String ufcidade, String email, String telefonecelular) {
@@ -60,10 +66,10 @@ public class Pessoa implements Serializable {
 	public void setIdpessoa(long idpessoa) {
 		this.idpessoa = idpessoa;
 	}
-	public int getEscolaridade() {
+	public String getEscolaridade() {
 		return escolaridade;
 	}
-	public void setEscolaridade(int escolaridade) {
+	public void setEscolaridade(String escolaridade) {
 		this.escolaridade = escolaridade;
 	}
 	public String getNome() {
@@ -185,12 +191,5 @@ public class Pessoa implements Serializable {
 	}
 	public void setTelefonecelular(String telefonecelular) {
 		this.telefonecelular = telefonecelular;
-	}
-	private String bairro;
-	private String cep;
-	private String cidade;
-	private String ufcidade;	
-	private String email;
-	private String telefonecelular;
-	
+	}	
 }
