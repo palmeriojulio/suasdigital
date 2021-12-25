@@ -13,7 +13,7 @@ public class ControlePessoa {
 	}
 	
 	//Controle cadastra pessoa.
-	public long ControleCadastrarPessoa(Pessoa pessoa) {
+	public long ControleCadastraPessoa(Pessoa pessoa) {
 		
 		long idpessoa = 0;
 		

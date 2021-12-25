@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+
+<%@ page import="br.com.suasdigital.util.GeraBanco" %>
+    
+<% GeraBanco.GeraDB(); %>
+
 <!DOCTYPE html>
 <html>
 <head>
