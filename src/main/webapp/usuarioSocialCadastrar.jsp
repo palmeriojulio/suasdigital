@@ -318,7 +318,7 @@
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Celular</label>
                     <div class="col-sm-9">
-                      <input type="text" name="telefonecelular" class="form-control" id="inputEmail3" placeholder="Número do celular / WhatsApp">
+                      <input type="text" name="telefonecelular" class="form-control" id="inputEmail3" placeholder="Número do celular / WhatsAppsvfsdfsdfgsdfgsd">
                     </div>
                   </div>
                 </div>        

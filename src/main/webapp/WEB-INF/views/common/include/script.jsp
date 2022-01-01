@@ -15,10 +15,10 @@
 <!-- Sparkline -->
 <script src="plugins/sparklines/sparkline.js"></script>
 <!-- InputMask -->
-<script src="../../../../plugins/inputmask/inputmask.js"></script>
-<script src="../../../../plugins/inputmask/inputmask.min.js"></script>
-<script src="../../../../plugins/inputmask/jquery.inputmask.js"></script>
-<script src="../../../../plugins/inputmask/jquery.inputmask.min.js"></script>
+<script src="plugins/inputmask/inputmask.js"></script>
+<script src="plugins/inputmask/inputmask.min.js"></script>
+<script src="plugins/inputmask/jquery.inputmask.js"></script>
+<script src="plugins/inputmask/jquery.inputmask.min.js"></script>
 <!-- JQVMap -->
 <script src="plugins/jqvmap/jquery.vmap.min.js"></script>
 <script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>

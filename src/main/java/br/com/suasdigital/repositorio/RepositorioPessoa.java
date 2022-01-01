@@ -15,9 +15,9 @@ public class RepositorioPessoa {
 	public long CadastrarPessoa(Pessoa pessoa) throws SQLException{
 		
 		Connection con = new ConnectionFactory().getConnection();
-		String sql = "INSERT INTO pessoa(idpessoa, nome, rg, cpf, nis, datanascimento, naturalidade, ufnascimento, sexo, foto, estadocivil"
-				+ "esolaridade, profissao, condicaoocupacao, zonamoradia, logradouro, numero, complemento, bairro, cep, cidade, ufcidade, email"
-				+ "telefonecelular) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO pessoa(idpessoa, nome, rg, cpf, nis, datanascimento, naturalidade, ufnascimento, sexo, foto,"
+				+ "estadocivil, esolaridade, profissao, condicaoocupacao, zonamoradia, logradouro, numero, complemento, bairro, cep, "
+				+ "cidade, ufcidade, email, telefonecelular) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 				
 		// Retorna o id que vai ser salvo no banco.
 		PreparedStatement stmp = (PreparedStatement) con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -43,9 +43,11 @@ public class RepositorioPessoa {
 			stmp.setString(17, pessoa.getNumero());
 			stmp.setString(18, pessoa.getComplemento());
 			stmp.setString(19, pessoa.getBairro());
-			stmp.setString(20, pessoa.getCidade());
-			stmp.setString(21, pessoa.getUfcidade());
-			stmp.setString(22, pessoa.getEmail());
+			stmp.setString(20, pessoa.getCep());
+			stmp.setString(21, pessoa.getCidade());
+			stmp.setString(22, pessoa.getUfcidade());
+			stmp.setString(23, pessoa.getEmail());
+			stmp.setString(24, pessoa.getTelefonecelular());
 			
 			stmp.executeUpdate();
 			

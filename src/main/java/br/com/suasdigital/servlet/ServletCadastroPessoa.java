@@ -20,6 +20,8 @@ public class ServletCadastroPessoa extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		System.out.println("Chamou ServletCadastroPessoa ");
+		
 		Pessoa pessoa = new Pessoa();
 		pessoa.setNome(request.getParameter("nome").replace("<", "").replace(">", "").toUpperCase().trim());
 		pessoa.setRg(request.getParameter("rg").replace("<", "").replace(">", "").trim());
@@ -29,6 +31,7 @@ public class ServletCadastroPessoa extends HttpServlet {
 		pessoa.setNaturalidade(request.getParameter("naturalidade").replace("<", "").replace(">", "").toUpperCase().trim());
 		pessoa.setUfnascimento(request.getParameter("ufnascimento").replace("<", "").replace(">", "").trim());
 		pessoa.setSexo(request.getParameter("sexo"));
+		pessoa.setFoto("bdfotos/avatar/pessoa.png");
 		pessoa.setEstadocivil(request.getParameter("estadocivil").replace("<", "").replace(">", "").toUpperCase().trim());
 		pessoa.setEscolaridade(request.getParameter("escolaridade").replace("<", "").replace(">", "").toUpperCase().trim());
 		pessoa.setProfissao(request.getParameter("profissao").replace("<", "").replace(">", "").trim().toUpperCase());
@@ -44,7 +47,8 @@ public class ServletCadastroPessoa extends HttpServlet {
 		pessoa.setEmail(request.getParameter("email").replace("<", "").replace(">", "").toLowerCase().trim());
 		pessoa.setTelefonecelular(request.getParameter("telefonecelular").replace("<", "").replace(">", "").trim());
 		
-		System.out.println(pessoa);
+		System.out.println(pessoa.getTelefonecelular());
+		
 		//cadastra pessoa.
 		Facade.getInstance().getControlePessoa().ControleCadastraPessoa(pessoa);
 		
