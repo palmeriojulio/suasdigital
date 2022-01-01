@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.suasdigital.controle.Facade;
 import br.com.suasdigital.modelo.Pessoa;
 
-@WebServlet("/ServletCadastroPessoa")
+@WebServlet("/ServletCadastroPesso")
 public class ServletCadastroPessoa extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -50,7 +50,7 @@ public class ServletCadastroPessoa extends HttpServlet {
 		System.out.println(pessoa.getTelefonecelular());
 		
 		//cadastra pessoa.
-		Facade.getInstance().getControlePessoa().ControleCadastraPessoa(pessoa);
+		//Facade.getInstance().getControlePessoa().ControleCadastraPessoa(pessoa);
 		
 		response.sendRedirect(request.getContextPath()+"/cadastropessoa.jsp?status=1");
 	}	

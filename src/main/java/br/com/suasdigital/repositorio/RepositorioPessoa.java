@@ -47,8 +47,7 @@ public class RepositorioPessoa {
 			stmp.setString(21, pessoa.getCidade());
 			stmp.setString(22, pessoa.getUfcidade());
 			stmp.setString(23, pessoa.getEmail());
-			stmp.setString(24, pessoa.getTelefonecelular());
-			
+			stmp.setString(24, pessoa.getTelefonecelular());			
 			stmp.executeUpdate();
 			
 			ResultSet rs = stmp.getGeneratedKeys();
