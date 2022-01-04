@@ -17,41 +17,27 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">      
-      <!-- Notifications Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-bell"></i>
-          <span class="badge badge-warning navbar-badge">15</span>
+      <li class="nav-item dropdown user-menu">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+          <img src="dist/img/user2-160x160.jpg" class="user-image img-circle elevation-3" alt="User Image">
+          <span class="d-none d-md-inline">Palmério Júlio</span>
         </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <span class="dropdown-item dropdown-header">15 Notifications</span>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-envelope mr-2"></i> 4 new messages
-            <span class="float-right text-muted text-sm">3 mins</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-users mr-2"></i> 8 friend requests
-            <span class="float-right text-muted text-sm">12 hours</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <i class="fas fa-file mr-2"></i> 3 new reports
-            <span class="float-right text-muted text-sm">2 days</span>
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
-        </div>
-      </li>
-      <li class="nav-item">        
-        
-                    <div class="custom-control custom-switch">
-                      <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                      <label class="custom-control-label" for="customSwitch1">Drakmod</label>
-                    </div>
-                  
-      </li>
+        <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
+          <!-- User image -->
+          <li class="user-header bg-secondary">
+            <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-3" alt="User Image">
+            <p>
+              Palmério Júlio - Web Developer
+              <small>Member since Nov. 2012</small>
+            </p>
+          </li>         
+          <!-- Menu Footer-->
+          <li class="user-footer">
+            <a href="#" class="btn btn-success"><i class="fas fa-user-edit mr-2"></i>Alterar perfil</a>
+            <a href="#" class="btn btn-danger float-right"><i class="fas fa-sign-out-alt mr-2"></i>Sair</a>
+          </li>
+        </ul>
+      </li>     
     </ul>
   </nav>
   <!-- /.navbar -->

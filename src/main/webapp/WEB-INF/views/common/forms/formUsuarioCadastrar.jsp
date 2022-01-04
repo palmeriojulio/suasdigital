@@ -1,43 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cadastrar Usu√°rio</title>
-  <%@include file="/WEB-INF/views/common/include/meta.jsp"%>
-</head>
-<body class="hold-transition sidebar-mini">
-<div class="wrapper">
-
-  <!-- Navbar -->
-  <%@ include file="/WEB-INF/views/common/include/header.jsp" %>
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <%@include file="/WEB-INF/views/common/include/aside.jsp"%>
-
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <div class="container-fluid">
-        <div class="row mb-2">
-          <div class="col-sm-6">
-            <h1>Cadastrar Usu√°rio Social</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Usu√°rio Social</a></li>
-              <li class="breadcrumb-item active">Cadastrar Usu√°rio Social</li>
-            </ol>
-          </div>
-        </div>
-      </div><!-- /.container-fluid -->
-    </section>
-
-    <!-- Main content -->
-    <section class="content">
+<section class="content">
       <div class="container-fluid">
         <div class="row">
           <!-- left column -->
@@ -54,37 +15,37 @@
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Nome</label>
                     <div class="col-sm-9">
-                      <input type="text" name="nome" class="form-control" id="inputEmail3" placeholder="Nome completo">
+                      <input type="text" name="nome" class="form-control" id="nome" required="required" placeholder="Nome completo">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">RG</label>
                     <div class="col-sm-9">
-                      <input type="text" name="rg" class="form-control" id="inputEmail3" placeholder="N√∫mero do RG">
+                      <input type="text" name="rg" class="form-control" id="rg" required="required" placeholder="N˙mero do RG">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">CPF</label>
                     <div class="col-sm-9">
-                      <input type="text" name="cpf" class="form-control" id="inputEmail3" placeholder="N√∫mero do CPF">
+                      <input type="text" name="cpf" class="form-control" id="cpf" required="required" placeholder="N˙mero do CPF">
                     </div>
                   </div>
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">NIS</label>
                     <div class="col-sm-9">
-                      <input type="text" name="nis" class="form-control" id="inputEmail3" placeholder="N√∫mero do NIS">
+                      <input type="text" name="nis" class="form-control" id="nis" required="required" placeholder="N˙mero do NIS">
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Nascimento</label>
+                    <label for="datanascimento" class="col-sm-2 col-form-label">Nascimento</label>
                     <div class="col-sm-9">
-                      <input type="date" name="datanascimento" class="form-control">	
+                      <input type="date" name="datanascimento" class="form-control" required="required">	
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Naturalidade</label>
+                    <label for="naturalidade" class="col-sm-2 col-form-label">Naturalidade</label>
                     <div class="col-sm-9">
-                      <input type="text" name="naturalidade" class="form-control" id="inputEmail3" placeholder="Cidade de nascimento">
+                      <input type="text" name="naturalidade" class="form-control" id="naturalidade" placeholder="Cidade de nascimento">
                     </div>
                   </div>
                   <div class="form-group row">
@@ -95,36 +56,36 @@
                       		  name="ufnascimento">
                     	<option value="AC" data-select2-id="3" selected="selected">Acre</option>
     					<option value="AL">Alagoas</option>
-    					<option value="AP">Amap√°</option>
+    					<option value="AP">Amap·</option>
 				    	<option value="AM">Amazonas</option>
 				    	<option value="BA">Bahia</option>
-				    	<option value="CE">Cear√°</option>
+				    	<option value="CE">Cear·</option>
 				    	<option value="DF">Distrito Federal</option>
 				   		<option value="ES">Espirito Santo</option>
-				    	<option value="GO">Goi√°s</option>
-				    	<option value="MA">Maranh√£o</option>
+				    	<option value="GO">Goi·s</option>
+				    	<option value="MA">Maranh„o</option>
 				    	<option value="MS">Mato Grosso do Sul</option>
 				    	<option value="MT">Mato Grosso</option>
 				    	<option value="MG">Minas Gerais</option>
-				    	<option value="PA">Par√°</option>
-				    	<option value="PB">Para√≠ba</option>
-				    	<option value="PR">Paran√°</option>
+				    	<option value="PA">Par·</option>
+				    	<option value="PB">ParaÌba</option>
+				    	<option value="PR">Paran·</option>
 				    	<option value="PE">Pernambuco</option>
-				    	<option value="PI">Piau√≠</option>
+				    	<option value="PI">PiauÌ</option>
 				    	<option value="RJ">Rio de Janeiro</option>
 				    	<option value="RN">Rio Grande do Norte</option>
 				    	<option value="RS">Rio Grande do Sul</option>
-				    	<option value="RO">Rond√¥nia</option>
+				    	<option value="RO">RondÙnia</option>
 				    	<option value="RR">Roraima</option>
 				    	<option value="SC">Santa Catarina</option>
-				    	<option value="SP">S√£o Paulo</option>
+				    	<option value="SP">S„o Paulo</option>
 				    	<option value="SE">Sergipe</option>
 				    	<option value="TO">Tocantins</option>
                   	  </select>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Sexo</label>
+                    <label for="sexo" class="col-sm-2 col-form-label">Sexo</label>
                     <div class="col-sm-9">
                       <select name="sexo" required="required" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
                     	<option value="0" selected="selected" data-select2-id="3">Masculino</option>
@@ -159,7 +120,7 @@
                     	<option value="Casado">Casado</option>
                     	<option value="Amansiado">Amansiado</option>
                     	<option value="Divorciado">Divorciado</option>
-                    	<option value="Casado">Vi√∫vo</option>
+                    	<option value="Casado">Vi˙vo</option>
                   	  </select>
                     </div>
                   </div>
@@ -174,36 +135,36 @@
                     	<option value="Segundo Grau Incompleto">Segundo Grau Incompleto</option>
                     	<option value="Superior">Superior</option>
                     	<option value="Superior Incompleto">Superior Incompleto</option>
-                    	<option value="P√≥s-Gradua√ß√£o">P√≥s-Gradua√ß√£o</option>
-                    	<option value="P√≥s-Gradua√ß√£o Incompleto">P√≥s-Gradua√ß√£o Incompleto</option>
+                    	<option value="PÛs-GraduaÁ„o">PÛs-GraduaÁ„o</option>
+                    	<option value="PÛs-GraduaÁ„o Incompleto">PÛs-GraduaÁ„o Incompleto</option>
                   	  </select>
                     </div>
                   </div>
                   
                   <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Profiss√£o</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Profiss„o</label>
                     <div class="col-sm-9">
-                      <input type="text" name="profissao" class="form-control" id="inputEmail3" placeholder="Profiss√£o">
+                      <input type="text" name="profissao" class="form-control" id="inputEmail3" placeholder="Profiss„o">
                     </div>
                   </div>
                   
                   <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Condi√ß√£o de Ocupa√ß√£o</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">CondiÁ„o de OcupaÁ„o</label>
                     <div class="col-sm-9">
                       <select name="condicaoocupacao" required="required" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
                     	<option value="Empregado" selected="selected" data-select2-id="3">Empregado</option>
                     	<option value="Desempregado">Desempregado</option>
-                    	<option value="Estagi√°rio">Estagi√°rio</option>
+                    	<option value="Estagi·rio">Estagi·rio</option>
                     	<option value="Estudante">Estudante</option>
                     	<option value="Aposentado">Aposentado</option>
                     	<option value="Pensionista">Pensionista</option>
-                    	<option value="Pensionista">Benef√≠cio Previdenci√°rio</option>
+                    	<option value="Pensionista">BenefÌcio Previdenci·rio</option>
                   	  </select>
                     </div>
                   </div>
                   
                   <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Regi√£o de Moradia</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Regi„o de Moradia</label>
                     <div class="col-sm-9">
                       <select name="zonamoradia" required="required" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
                     	<option value="Empregado" selected="selected" data-select2-id="3">Zona Urbana</option>
@@ -213,53 +174,53 @@
                   </div>
                 </div>
                   
-                <!-- Endere√ßo Pessoal -->
+                <!-- EndereÁo Pessoal -->
                 <div class="card card-outline card-secondary">                	
               		<div class="card-header">
-                		<h2 class="card-title">Endere√ßo</h2>
+                		<h2 class="card-title">EndereÁo</h2>
               		</div>              		
               	</div>
               	
               	<div class="card-body" style="margin-left: 50px;">              		
                   <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Endere√ßo</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">EndereÁo</label>
                     <div class="col-sm-9">
-                      <input type="text" name="logradouro" class="form-control" id="inputEmail3" placeholder="Rua, Avenida, Travessa, Pra√ßa">
+                      <input type="text" name="logradouro" class="form-control" id="inputEmail3" required="required" placeholder="Rua, Avenida, Travessa, PraÁa">
                     </div>
                   </div>
                   
                   <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">N√∫mero</label>
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">N˙mero</label>
                     <div class="col-sm-9">
-                      <input type="text" name="numero" class="form-control" id="inputEmail3" placeholder="N√∫mero">
+                      <input type="text" name="numero" class="form-control" id="inputEmail3" required="required" placeholder="N˙mero">
                     </div>
                   </div>
                   
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Complemento</label>
                     <div class="col-sm-9">
-                      <input type="text" name="complemento" class="form-control" id="inputEmail3" placeholder="Edificio, N¬∫ Apartamento">
+                      <input type="text" name="complemento" class="form-control" id="inputEmail3" placeholder="Edificio, N∫ Apartamento">
                     </div>
                   </div>
                   
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Bairro</label>
                     <div class="col-sm-9">
-                      <input type="text" name="bairro" class="form-control" id="inputEmail3" placeholder="Bairro | Distrito | Comunidade">
+                      <input type="text" name="bairro" class="form-control" id="inputEmail3" required="required" placeholder="Bairro | Distrito | Comunidade">
                     </div>
                   </div>
                   
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">CEP</label>
                     <div class="col-sm-9">
-                      <input type="text" name="cep" class="form-control" id="inputEmail3" placeholder="N¬∫ de CEP">
+                      <input type="text" name="cep" class="form-control" id="inputEmail3" required="required" placeholder="N∫ de CEP">
                     </div>
                   </div>
                   
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Cidade</label>
                     <div class="col-sm-9">
-                      <input type="text" name="cidade" class="form-control" id="inputEmail3" placeholder="Cidade">
+                      <input type="text" name="cidade" class="form-control" id="inputEmail3" required="required" placeholder="Cidade">
                     </div>
                   </div>
                   
@@ -269,29 +230,29 @@
                       <select name="ufcidade" required="required" class="form-control select2 select2-hidden-accessible" style="width: 100%;" data-select2-id="1" tabindex="-1" aria-hidden="true">
                     	<option value="AC" data-select2-id="3" selected="selected">Acre</option>
     					<option value="AL">Alagoas</option>
-    					<option value="AP">Amap√°</option>
+    					<option value="AP">Amap·</option>
 				    	<option value="AM">Amazonas</option>
 				    	<option value="BA">Bahia</option>
-				    	<option value="CE">Cear√°</option>
+				    	<option value="CE">Cear·</option>
 				    	<option value="DF">Distrito Federal</option>
 				   		<option value="ES">Espirito Santo</option>
-				    	<option value="GO">Goi√°s</option>
-				    	<option value="MA">Maranh√£o</option>
+				    	<option value="GO">Goi·s</option>
+				    	<option value="MA">Maranh„o</option>
 				    	<option value="MS">Mato Grosso do Sul</option>
 				    	<option value="MT">Mato Grosso</option>
 				    	<option value="MG">Minas Gerais</option>
-				    	<option value="PA">Par√°</option>
-				    	<option value="PB">Para√≠ba</option>
-				    	<option value="PR">Paran√°</option>
+				    	<option value="PA">Par·</option>
+				    	<option value="PB">ParaÌba</option>
+				    	<option value="PR">Paran·</option>
 				    	<option value="PE">Pernambuco</option>
-				    	<option value="PI">Piau√≠</option>
+				    	<option value="PI">PiauÌ</option>
 				    	<option value="RJ">Rio de Janeiro</option>
 				    	<option value="RN">Rio Grande do Norte</option>
 				    	<option value="RS">Rio Grande do Sul</option>
-				    	<option value="RO">Rond√¥nia</option>
+				    	<option value="RO">RondÙnia</option>
 				    	<option value="RR">Roraima</option>
 				    	<option value="SC">Santa Catarina</option>
-				    	<option value="SP">S√£o Paulo</option>
+				    	<option value="SP">S„o Paulo</option>
 				    	<option value="SE">Sergipe</option>
 				    	<option value="TO">Tocantins</option>
                   	  </select>
@@ -318,7 +279,7 @@
                   <div class="form-group row">
                     <label for="inputEmail3" class="col-sm-2 col-form-label">Celular</label>
                     <div class="col-sm-9">
-                      <input type="text" name="telefonecelular" class="form-control" id="inputEmail3" placeholder="N√∫mero do celular / WhatsAppsvfsdfsdfgsdfgsd">
+                      <input type="text" name="telefonecelular" class="form-control" id="inputEmail3" required="required" placeholder="00-0-0000-0000">
                     </div>
                   </div>
                 </div>        
@@ -336,22 +297,4 @@
         <!-- /.row -->
       </div><!-- /.container-fluid -->
     </section>
-    <!-- /.content -->
-  </div>  
-  <!-- /.content-wrapper -->
-  
-  <!-- footer -->
-  <%@include file="WEB-INF/views/common/include/footer.jsp"%>
-  <!-- /footer -->
-  	
-  <!-- Control Sidebar -->
-  <%@include file="WEB-INF/views/common/include/control-sidebar.jsp"%>
-  <!-- /.control-sidebar -->
-</div>
-
-  <!-- scripts -->
-  <%@include file="/WEB-INF/views/common/include/script.jsp"%>
-  <!-- /scripts -->
-
-</body>
-</html>
+    

@@ -12,7 +12,7 @@ http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
 	<property name="hibernate.hbm2ddl.auto" value="update" />
 	<property name="hibernate.show_sql" value="true" />
 	<property name="hibernate.format_sql" value="true" />
-	<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+	<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
 	<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/suasdigital" />
 	<property name="javax.persistence.jdbc.user" value="debian-sys-maint" />
 	<property name="javax.persistence.jdbc.password" value="X4fKtGENsmA2Ulvr" />

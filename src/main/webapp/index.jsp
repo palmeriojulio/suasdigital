@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 
 <%@ page import="br.com.suasdigital.util.GeraBanco" %>
-    
+
 <% GeraBanco.GeraDB(); %>
 
 <!DOCTYPE html>

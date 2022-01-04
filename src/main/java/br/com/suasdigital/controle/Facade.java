@@ -3,8 +3,7 @@ package br.com.suasdigital.controle;
 public class Facade {
 	
 	private static Facade instance;
-	private ControlePessoa cpessoa;
-	
+	private ControlePessoa cpessoa;	
 	
 	
 	public Facade() {

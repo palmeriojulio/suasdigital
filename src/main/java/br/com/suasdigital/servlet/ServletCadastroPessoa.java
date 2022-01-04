@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.suasdigital.controle.Facade;
 import br.com.suasdigital.modelo.Pessoa;
 
-@WebServlet("/ServletCadastroPesso")
+@WebServlet("/ServletCadastroPessoa")
 public class ServletCadastroPessoa extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -19,9 +19,7 @@ public class ServletCadastroPessoa extends HttpServlet {
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		System.out.println("Chamou ServletCadastroPessoa ");
-		
+			
 		Pessoa pessoa = new Pessoa();
 		pessoa.setNome(request.getParameter("nome").replace("<", "").replace(">", "").toUpperCase().trim());
 		pessoa.setRg(request.getParameter("rg").replace("<", "").replace(">", "").trim());
@@ -46,12 +44,11 @@ public class ServletCadastroPessoa extends HttpServlet {
 		pessoa.setUfcidade(request.getParameter("ufcidade").replace("<", "").replace(">", "").trim());
 		pessoa.setEmail(request.getParameter("email").replace("<", "").replace(">", "").toLowerCase().trim());
 		pessoa.setTelefonecelular(request.getParameter("telefonecelular").replace("<", "").replace(">", "").trim());
-		
-		System.out.println(pessoa.getTelefonecelular());
-		
+			
+		System.out.println(pessoa.getNome());
 		//cadastra pessoa.
-		//Facade.getInstance().getControlePessoa().ControleCadastraPessoa(pessoa);
+		Facade.getInstance().getControlePessoa().ControleCadastraPessoa(pessoa);
 		
-		response.sendRedirect(request.getContextPath()+"/cadastropessoa.jsp?status=1");
+		response.sendRedirect(request.getContextPath()+"/usuario_social_cadastrar.jsp?status=1");
 	}	
 }

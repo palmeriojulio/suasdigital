@@ -15,9 +15,9 @@
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
+        </div> 
         <div class="info">
-          <a href="#" class="d-block">Palmério Júlio</a>
+          <a class="d-block">Palmério Júlio</a>
         </div>
       </div>
 
@@ -38,14 +38,14 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="usuarioSocialCadastrar.jsp" class="nav-link">
-                  <i class="far fa-user nav-icon"></i>
+                <a href="usuario_social_cadastrar.jsp" class="nav-link">
+                  <i class="far fa-user nav-icon text-info ml-2"></i>
                   <p>Cadastrar</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
-                  <i class="far fa-search nav-icon"></i>
+                <a href="usuario_social_listar.jsp" class="nav-link">
+                  <i class="fa fa-search nav-icon text-info ml-2"></i>  
                   <p>Pesquisar</p>
                 </a>
               </li>              
@@ -53,7 +53,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
+              <i class="nav-icon fas fa-users"></i>
               <p>
                 Famílias
                 <i class="fas fa-angle-left right"></i>
@@ -164,7 +164,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
+              <i class="nav-icon fas fa-laptop"></i>
               <p>
                 Atendimentos
                 <i class="fas fa-angle-left right"></i>
@@ -199,7 +199,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+              <i class="nav-icon fas fa-handshake"></i>
               <p>
                 Benefícios Eventuais
                 <i class="fas fa-angle-left right"></i>
@@ -252,7 +252,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-home"></i>
+              <i class="nav-icon fas fa-user-graduate"></i>
               <p>
                 Cursos
                 <i class="right fas fa-angle-left"></i>
@@ -318,7 +318,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+              <i class="nav-icon fas fa-building"></i>
               <p>
                 Departamentos
                 <i class="fas fa-angle-left right"></i>
@@ -341,9 +341,32 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
+              <i class="nav-icon fas fa-people-arrows"></i>
               <p>
                 Profissional
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/tables/simple.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Cadastrar</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/tables/data.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Pesquisar</p>
+                </a>
+              </li>              
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-hand-point-right"></i>
+              <p>
+                Encaminhamento
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>

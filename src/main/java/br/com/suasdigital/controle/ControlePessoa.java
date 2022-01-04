@@ -1,5 +1,8 @@
 package br.com.suasdigital.controle;
 
+import java.sql.SQLException;
+import java.util.List;
+
 import br.com.suasdigital.modelo.Pessoa;
 import br.com.suasdigital.repositorio.RepositorioPessoa;
 
@@ -7,12 +10,12 @@ public class ControlePessoa {
 	
 	private RepositorioPessoa rpessoa = null;
 
-	//Construtor.
+	// Construtor.
 	public ControlePessoa( ) {
 		this.rpessoa = new RepositorioPessoa();
 	}
 	
-	//Controle cadastra pessoa.
+	// Controle cadastrar pessoa.
 	public long ControleCadastraPessoa(Pessoa pessoa) {
 		
 		long idpessoa = 0;
@@ -24,4 +27,26 @@ public class ControlePessoa {
 		}
 		return idpessoa;
 	}
+	
+	// Controle pesquisar todas pessoas
+	public List<Pessoa> ControleListaPessoa() {
+		List<Pessoa> pessoas = null;
+		try {
+    		pessoas = rpessoa.ListaPessoa();
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
+    	return pessoas;
+	}
+	
+	// Controle pesquisar pessoa por ID
+	public Pessoa ControleBuscaPessoaPorId(long idpessoa) {
+    	Pessoa pessoa = null;
+    	try {
+    		pessoa = rpessoa.BuscaPessoaPorId(idpessoa);
+		} catch(SQLException e) {
+			e.printStackTrace();
+		}
+    	return pessoa;
+    }
 }
