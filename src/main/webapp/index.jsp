@@ -1,22 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
 <%@ page import="br.com.suasdigital.util.GeraBanco" %>
 
 <% GeraBanco.GeraDB(); %>
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
-<%@include file="/WEB-INF/views/common/include/meta.jsp"%>
+<%@include file="WEB-INF/views/common/include/meta.jsp"%>
 <title>Suas Digital</title>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <!-- .wrapper -->
 <div class="wrapper">
 
-	<%@include file="/WEB-INF/views/common/include/header.jsp"%>
-	<%@include file="/WEB-INF/views/common/include/aside.jsp"%>
+	<%@include file="WEB-INF/views/common/include/header.jsp"%>
+	<%@include file="WEB-INF/views/common/include/aside.jsp"%>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -26,12 +26,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">Painel Principal</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard</li>
+              <li class="breadcrumb-item active">Painel Principal</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -40,7 +40,6 @@
 
     <!-- Main content -->
     <section class="content">
-
       
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
@@ -56,7 +55,7 @@
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">Mais informações <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -624,13 +623,13 @@
   </div>
   <!-- /.content-wrapper -->
 
-	<%@include file="/WEB-INF/views/common/include/footer.jsp"%>
-	<%@include file="/WEB-INF/views/common/include/control-sidebar.jsp"%>
+	<%@include file="WEB-INF/views/common/include/footer.jsp"%>
+	<%@include file="WEB-INF/views/common/include/control-sidebar.jsp"%>
 
 </div>
 <!-- /.wrapper -->
 
-	<%@include file="/WEB-INF/views/common/include/script.jsp"%>
+	<%@include file="WEB-INF/views/common/include/script.jsp"%>
 
 </body>
 </html>

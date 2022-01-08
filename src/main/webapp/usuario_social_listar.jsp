@@ -3,18 +3,21 @@
 <%@page import="br.com.suasdigital.modelo.Pessoa"%>
 <%@page import="java.util.List"%>
 
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 	
 <% TimeStamp data = new TimeStamp(); %>
 
 <% List<Pessoa> pessoas = Facade.getInstance().getControlePessoa().ControleListaPessoa(); %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<html lang="pt_br">
 <head>
 <%@include file="/WEB-INF/views/common/include/meta.jsp"%>
-<title>Lista de UsuÃ¡rios</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<title>Lista de Usuários</title>
 </head>
 <body class="hold-transition sidebar-mini">
 	<div class="wrapper">
@@ -33,18 +36,19 @@
 			<div class="container-fluid">
 				<div class="row mb-2">
 					<div class="col-sm-6">
-						<h1><i class="fas fa-search mr-3 ml-2"></i>Pesquisar UsuÃ¡rio Social</h1>
+						<h1>
+							<i class="fas fa-search mr-3 ml-2"></i>Pesquisar Usuário Social
+						</h1>
 					</div>
 					<div class="col-sm-6">
 						<ol class="breadcrumb float-sm-right">
-							<li class="breadcrumb-item"><a href="#">UsuÃ¡rio Social</a></li>
-							<li class="breadcrumb-item active">Pesquisar UsuÃ¡rio Social</li>
+							<li class="breadcrumb-item"><a href="#">Usuário Social</a></li>
+							<li class="breadcrumb-item active">Pesquisar Usuário Social</li>
 						</ol>
 					</div>
 				</div>
 			</div>
-			<!-- /.container-fluid --> 
-			</section>
+			<!-- /.container-fluid --> </section>
 
 			<!-- Main content -->
 			<section class="content">
@@ -76,11 +80,11 @@
 											<th>NIS</th>
 											<th>Data Nascimento</th>
 											<th>Celular</th>
-											<th style="width: 20px; position: relative;">AÃ§Ãµes</th>
+											<th style="width: 20px; position: relative;">Ações</th>
 										</tr>
 									</thead>
 									<tbody>
-									<% for(Pessoa p: pessoas) { %>
+										<% for(Pessoa p: pessoas) { %>
 										<tr>
 											<td><%=p.getIdpessoa() %></td>
 											<td><%=p.getNome() %></td>
@@ -89,94 +93,155 @@
 											<td><%=data.ConverteFormatoDataUSparaBR(p.getDatanascimento())%></td>
 											<td><%=p.getTelefonecelular() %></td>
 											<td><div class="btn-group">
-												<button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-lg"title="Visualizar">
-													<i class="fas fa-address-card"></i>
-												</button>
-												<a href="usuario_social_editar.jsp?idpessoa=<%=p.getIdpessoa() %>" type="button" class="btn btn-warning" title="Editar">
-													<i class="fas fa-user-edit"></i>
-												</a>
-												<button type="button" class="btn btn-danger" title="Exluir">
-													<i class="fas fa-user-times"></i>
-												</button>												
-												</div>
+													<a onclick="visualisar('<%=p.getIdpessoa()%>',
+																		   '<%=p.getNome()%>',
+																		   '<%=p.getRg()%>',
+																		   '<%=p.getCpf()%>',
+																		   '<%=p.getNis()%>',
+																		   '<%=data.ConverteFormatoDataUSparaBR(p.getDatanascimento())%>',
+																		   '<%=p.getNaturalidade()%>',
+																		   '<%=p.getUfnascimento()%>',
+																		   '<%=p.getSexo()%>',
+																		   '<%=p.getFoto()%>',
+																		   '<%=p.getEstadocivil()%>',
+																		   '<%=p.getEscolaridade()%>',
+																		   '<%=p.getProfissao()%>',
+																		   '<%=p.getCondicaoocupacao()%>',
+																		   '<%=p.getZonamoradia()%>',
+																		   '<%=p.getLogradouro()%>',
+																		   '<%=p.getNumero()%>',
+																		   '<%=p.getComplemento()%>',
+																		   '<%=p.getBairro()%>',
+																		   '<%=p.getCep()%>',
+																		   '<%=p.getCidade()%>',
+																		   '<%=p.getUfcidade()%>',
+																		   '<%=p.getEmail()%>',
+																		   '<%=p.getTelefonecelular()%>')" 
+														type="button" class="btn btn-info" data-toggle="modal"
+														data-target="#modalVisualisar" title="Visualizar">
+														<i class="fas fa-user"></i>
+													</a> 
+													<a href="usuario_social_editar.jsp?idpessoa=<%=p.getIdpessoa() %>"
+														type="button" class="btn btn-warning" title="Editar">
+														<i class="fas fa-user-edit"></i>
+													</a> 
+													<a type="button" class="btn btn-danger" title="Exluir">
+														<i class="fas fa-user-times"></i>
+													</a>
+												</div> 
 											</td>
 										</tr>
-									 <%} %>
+										<%} %>
 									</tbody>
-								</table>		
+								</table>
 							</div>
 							<!-- /.card-body -->
 							<div class="card-footer clearfix">
 								<ul class="pagination pagination-sm m-0 float-right">
-									<li class="page-item"><a class="page-link" href="#">Â«</a></li>
+									<li class="page-item"><a class="page-link" href="#">«</a></li>
 									<li class="page-item"><a class="page-link" href="#">1</a></li>
 									<li class="page-item"><a class="page-link" href="#">2</a></li>
 									<li class="page-item"><a class="page-link" href="#">3</a></li>
-									<li class="page-item"><a class="page-link" href="#">Â»</a></li>
+									<li class="page-item"><a class="page-link" href="#">»</a></li>
 								</ul>
 							</div>
 						</div>
-						<!-- /.card -->						
+						<!-- /.card -->
 					</div>
-					<!-- /.col -->					
-				</div>							
-				<!-- /.row -->				
+					<!-- /.col -->
+				</div>
+				<!-- /.row -->
 			</div>
-			<!-- /.container-fluid --> 
-		 	</section>
+			<!-- /.container-fluid --> </section>
 			<!-- /.content -->
 		</div>
 		<!-- /.content-wrapper -->
 		
+		<!-- Modal Visualisar -->
+		<div class="modal fade" id="modalVisualisar" tabindex="-1"
+			role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="card card-widget widget-user-2">
+					<!-- Add the bg color to the header using any of the bg-* classes -->
+					<div class="widget-user-header bg-info">
+						<div class="widget-user-image">
+							<img class="img-circle elevation-2 mr-2"
+								src="dist/img/user7-128x128.jpg" alt="User Avatar"> <br>
+							<h5 id="nome"></h5>
+							<p>
+								<b>CPF: </b><i id="cpf"></i> | 
+								<b>Nis: </b><i id="nis"></i>
+							</p>
+						</div>
+					</div>
+					<div class="card-footer p-0">
+						<div class="card-footer">
+							<div class="row mt-3">
+								<div class="col-sm-6 border-right">
+									<p>
+										<b>RG: </b><i id="rg"></i><br>
+										<b>Nascimento: </b><i id="datanascimento"></i><br>
+										<b>Natural: </b><i id="naturalidade"></i><br>
+										<b>UF: </b><i id="ufnascimento"></i><br>
+										<b>Sexo: </b><i id="sexo"></i><br>
+										<b>Estadocivil: </b><i id="estadocivil"></i><br>
+										<b>Escolaridade: </b><i id="escolaridade"></i><br>
+										<b>Profissão: </b><i id="profissao"></i><br>
+										<b>Ocupacional: </b><i id="condicaoocupacao"></i><br>
+										<b>Zona: </b><i id="zonamoradia"></i><br>
+									</p>
+								</div>
+								<div class="col-sm-6">
+									<p>
+										<b>Endereço: </b><i id="logradouro"></i><br>
+										<b>N: </b><i id="numero"></i><br>
+										<b>Complemento: </b><i id="complemento"></i><br>
+										<b>Bairro: </b><i id="bairro"></i><br>
+										<b>CEP: </b><i id="cep"></i><br>
+										<b>Cidade: </b><i id="cidade"></i><br>
+										<b>UF: </b><i id="ufcidade"></i><br>
+										<b>E-mail: </b><i id="email"></i><br>
+										<b>Celular: </b><i id="telefonecelular"></i><br>
+									</p>
+								</div>									
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript">		
 		
+			 function visualisar(idpessoa, nome, rg, cpf, nis, datanascimento, naturalidade, ufnascimento, sexo, foto, estadocivil, escolaridade, profissao, condicaoocupacao, zonamoradia, logradouro, numero, complemento, bairro, cep, cidade, ufcidade, email, telefonecelular,) {
+				 				 
+				//document.getElementById('id').innerHTML = idpessoa;
+				document.getElementById('nome').innerHTML = nome;
+				document.getElementById('rg').innerHTML = rg;
+				document.getElementById('cpf').innerHTML = cpf;
+				document.getElementById('nis').innerHTML = nis;
+				document.getElementById('datanascimento').innerHTML = datanascimento;
+				document.getElementById('naturalidade').innerHTML = naturalidade;
+				document.getElementById('ufnascimento').innerHTML = ufnascimento;
+				document.getElementById('sexo').innerHTML = sexo;
+				//document.getElementById('foto').innerHTML = foto;
+				document.getElementById('estadocivil').innerHTML = estadocivil;
+				document.getElementById('escolaridade').innerHTML = escolaridade;
+				document.getElementById('profissao').innerHTML = profissao;
+				document.getElementById('condicaoocupacao').innerHTML = condicaoocupacao;
+				document.getElementById('zonamoradia').innerHTML = zonamoradia;
+				document.getElementById('logradouro').innerHTML = logradouro;
+				document.getElementById('numero').innerHTML = numero;
+				document.getElementById('complemento').innerHTML = complemento;
+				document.getElementById('bairro').innerHTML = bairro;
+				document.getElementById('cep').innerHTML = cep;
+				document.getElementById('cidade').innerHTML = cidade;
+				document.getElementById('ufcidade').innerHTML = ufcidade;
+				document.getElementById('email').innerHTML = email;
+				document.getElementById('telefonecelular').innerHTML = telefonecelular;
+			}  
 			
-		<%-- <div class="modal fade" id="modal-xl">
-        <div class="modal-dialog modal-xl">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Editar Cadastro</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <jsp:include page="WEB-INF/views/common/forms/form_usuario_social_alterar.jsp"></jsp:include>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary">Salvar MudanÃ§as</button>
-            </div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
-      
-      <div class="modal fade" id="modal-lg">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h4 class="modal-title">Extra Large Modal</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>One fine body&hellip;</p>
-            </div>
-            <div class="modal-footer">
-        		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        		<button type="button" class="btn btn-primary">Save changes</button>
-      		</div>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->	 --%>		
-		
-		
+		</script>
 
 		<!-- footer -->
 		<%@include file="/WEB-INF/views/common/include/footer.jsp"%>
@@ -188,7 +253,7 @@
 	</div>
 
 	<!-- scripts -->
-	<%@include file="/WEB-INF/views/common/include/script.jsp"%>
+	<%@include file="WEB-INF/views/common/include/script.jsp"%>
 	<!-- /scripts -->
 
 </body>
