@@ -4,7 +4,7 @@ Aplicação para gerenciar secretarias municipais de assistência social e cidad
 
 
 <p align="center">
-  <img src="dist/img/logo.png" />
+  <img src="/src/main/webapp/dist/img/logo.png" />
 </p>
 
 A intenção do sistema é levar o prontuario suas para forma digital e facilitar a gestão das secretarias de assistência social e sues equipamentos. 
