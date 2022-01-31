@@ -28,7 +28,7 @@ public class Pessoa implements Serializable {
 	private String nis;
 	@Column(length=10, columnDefinition="DATE")
 	private String datanascimento;
-	@Column(length=50)
+	@Column(length=30)
 	private String naturalidade;
 	@Column(length=2)
 	private String ufnascimento;
@@ -37,12 +37,12 @@ public class Pessoa implements Serializable {
 	@Column(length=60)
 	private String foto;
 	@Column(length=30)
-	private String estadocivil;
+	private String estadocivil;	
 	@Column(length=30)
 	private String escolaridade;
 	@Column(length=30)
 	private String profissao;
-	@Column(length=30)
+	@Column(length=50)
 	private String condicaoocupacao;
 	@Column(length=20)
 	private String zonamoradia;
@@ -54,7 +54,7 @@ public class Pessoa implements Serializable {
 	private String complemento;
 	@Column(length=40)
 	private String bairro;
-	@Column(length=9)
+	@Column(length=10)
 	private String cep;
 	@Column(length=30)
 	private String cidade;
@@ -70,9 +70,10 @@ public class Pessoa implements Serializable {
 	
 
 	public Pessoa(long idpessoa, String nome, String rg, String cpf, String nis, String datanascimento,
-			String naturalidade, String ufnascimento, String sexo, String foto, String estadocivil, String escolaridade, 
-			String profissao, String condicaoocupacao, String zonamoradia, String logradouro, String numero, String complemento,
-			String bairro, String cep, String cidade, String ufcidade, String email, String telefonecelular) {
+			String naturalidade, String ufnascimento, String sexo, String foto, String estadocivil,
+			String escolaridade, String profissao, String condicaoocupacao, String zonamoradia, String logradouro,
+			String numero, String complemento, String bairro, String cep, String cidade, String ufcidade, String email,
+			String telefonecelular) {
 		super();
 		this.idpessoa = idpessoa;
 		this.nome = nome;
@@ -85,6 +86,7 @@ public class Pessoa implements Serializable {
 		this.sexo = sexo;
 		this.foto = foto;
 		this.estadocivil = estadocivil;
+		this.escolaridade = escolaridade;
 		this.profissao = profissao;
 		this.condicaoocupacao = condicaoocupacao;
 		this.zonamoradia = zonamoradia;
@@ -198,7 +200,7 @@ public class Pessoa implements Serializable {
 	public void setFoto(String foto) {
 		this.foto = foto;
 	}
-
+	
 
 	public String getEstadocivil() {
 		return estadocivil;
@@ -207,8 +209,8 @@ public class Pessoa implements Serializable {
 
 	public void setEstadocivil(String estadocivil) {
 		this.estadocivil = estadocivil;
-	}
-	
+	}	
+
 
 	public String getEscolaridade() {
 		return escolaridade;

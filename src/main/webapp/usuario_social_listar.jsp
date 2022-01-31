@@ -1,27 +1,31 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
 <%@page import="br.com.suasdigital.util.TimeStamp"%>
 <%@page import="br.com.suasdigital.controle.Facade"%>
 <%@page import="br.com.suasdigital.modelo.Pessoa"%>
 <%@page import="java.util.List"%>
-
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
 	
-<% TimeStamp data = new TimeStamp(); %>
+<%TimeStamp data = new TimeStamp();%>
 
-<% List<Pessoa> pessoas = Facade.getInstance().getControlePessoa().ControleListaPessoa(); %>
+<%
+ List<Pessoa> pessoas = Facade.getInstance().getControlePessoa().ControleListaPessoa();
+%>
+
+<%
+ String status = request.getParameter("status");
+%>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="pt_br">
+<html>
 <head>
-<%@include file="/WEB-INF/views/common/include/meta.jsp"%>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<title>Lista de Usu·rios</title>
+<%@include file="/WEB-INF/views/common/include/meta.jsp"%><!-- 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+<title>Lista de Usu√°rios</title>
 </head>
 <body class="hold-transition sidebar-mini">
 	<div class="wrapper">
-
+			
 		<!-- Navbar -->
 		<%@ include file="/WEB-INF/views/common/include/header.jsp"%>
 		<!-- /.navbar -->
@@ -34,16 +38,23 @@
 			<!-- Content Header (Page header) -->
 			<section class="content-header">
 			<div class="container-fluid">
+				<%-- <% if(status.equals("1")) { %>
+					<br>
+				<div class="alert alert-success alert-dismissable">
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				    <i class="icon fa fa-check"></i> Dados do aluno atualizados com sucesso!             
+				</div>
+				<%} %> --%>
 				<div class="row mb-2">
-					<div class="col-sm-6">
+					<div class="col-sm-6">          
 						<h1>
-							<i class="fas fa-search mr-3 ml-2"></i>Pesquisar Usu·rio Social
+							<i class="fas fa-search mr-3 ml-2"></i>Pesquisar Usu√°rio Social
 						</h1>
 					</div>
 					<div class="col-sm-6">
 						<ol class="breadcrumb float-sm-right">
-							<li class="breadcrumb-item"><a href="#">Usu·rio Social</a></li>
-							<li class="breadcrumb-item active">Pesquisar Usu·rio Social</li>
+							<li class="breadcrumb-item"><a href="#">Usu√°rio Social</a></li>
+							<li class="breadcrumb-item active">Pesquisar Usu√°rio Social</li>
 						</ol>
 					</div>
 				</div>
@@ -57,7 +68,93 @@
 					<div class="col-md-12">
 						<div class="card card-outline card-secondary">
 							<div class="card-header">
-								<div class="card-tools">
+								<h3 class="card-title"></h3>
+							</div>
+							<!-- /.card-header -->
+							<div class="card-body">
+								<div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+									<div class="row">
+										<div class="col-sm-12">
+											<table id="example1"
+												class="table table-bordered table-striped dataTable dtr-inline"
+												role="grid" aria-describedby="example1_info">
+												<thead>
+													<tr>
+														<th style="width: 10px">ID</th>
+														<th>Nome</th>
+														<th>CPF</th>
+														<th>NIS</th>
+														<th>Data Nascimento</th>
+														<th>Celular</th>
+														<th style="width: 20px; position: relative;">A√ß√µes</th>
+													</tr>
+												</thead>
+												<tbody>
+													<%
+														for(Pessoa p: pessoas) {
+													%>
+													<tr>
+														<td><%=p.getIdpessoa() %></td>
+														<td><%=p.getNome() %></td>
+														<td><%=p.getCpf() %></td>
+														<td><%=p.getNis() %></td>
+														<td><%=data.ConverteFormatoDataUSparaBR(p.getDatanascimento())%></td>
+														<td><%=p.getTelefonecelular() %></td>
+														<td><div class="btn-group">
+																<a onclick="visualisar('<%=p.getIdpessoa()%>',
+																					   '<%=p.getNome()%>',
+																					   '<%=p.getRg()%>',
+																					   '<%=p.getCpf()%>',
+																					   '<%=p.getNis()%>',
+																					   '<%=data.ConverteFormatoDataUSparaBR(p.getDatanascimento())%>',
+																					   '<%=p.getNaturalidade()%>',
+																					   '<%=p.getUfnascimento()%>',
+																					   '<%=p.getSexo()%>',
+																					   '<%=p.getFoto()%>',
+																					   '<%=p.getEstadocivil()%>',
+																					   '<%=p.getEscolaridade()%>',
+																					   '<%=p.getProfissao()%>',
+																					   '<%=p.getCondicaoocupacao()%>',
+																					   '<%=p.getZonamoradia()%>',
+																					   '<%=p.getLogradouro()%>',
+																					   '<%=p.getNumero()%>',
+																					   '<%=p.getComplemento()%>',
+																					   '<%=p.getBairro()%>',
+																					   '<%=p.getCep()%>',
+																					   '<%=p.getCidade()%>',
+																					   '<%=p.getUfcidade()%>',
+																					   '<%=p.getEmail()%>',
+																					   '<%=p.getTelefonecelular()%>')" 
+																	type="button" class="btn btn-info" data-toggle="modal"
+																	data-target="#modalVisualisar" title="Visualizar">
+																	<i class="fas fa-user"></i>
+																</a> 
+																<a href="usuario_social_editar.jsp?idpessoa=<%=p.getIdpessoa() %>"
+																	type="button" class="btn btn-warning" title="Editar">
+																	<i class="fas fa-user-edit"></i>
+																</a> 
+																<button onclick="excluir('<%= p.getIdpessoa() %>','<%= p.getNome() %>')" 
+																	type="button" class="btn btn-danger"  data-toggle="modal"
+																	data-target="#modalExcluir"  title="Exluir">
+																	<i class="fas fa-user-times"></i>
+																</button>
+															</div> 
+														</td>
+													</tr>
+													<%} %>
+												</tbody>
+											</table>
+										</div>
+									</div>									
+								</div>
+							</div>
+							<!-- /.card-body -->
+						</div>
+
+
+						<%-- <div class="card card-outline card-secondary">
+							<div class="card-header">
+								<!-- <div class="card-tools">
 									<div class="input-group input-group-sm" style="width: 250px;">
 										<input type="text" name="table_search"
 											class="form-control float-right" placeholder="Digite o CPF">
@@ -67,11 +164,12 @@
 											</button>
 										</div>
 									</div>
-								</div>
+								</div> -->
 							</div>
 							<!-- /.card-header -->
-							<div class="card-body table-responsive p-0">
-								<table class="table table-hover text-nowrap">
+							<div class="card-body table-responsive p-0">							
+								<div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+									<table id="example1" class="table table-hover text-nowrap">
 									<thead>
 										<tr>
 											<th style="width: 10px">ID</th>
@@ -80,7 +178,7 @@
 											<th>NIS</th>
 											<th>Data Nascimento</th>
 											<th>Celular</th>
-											<th style="width: 20px; position: relative;">AÁıes</th>
+											<th style="width: 20px; position: relative;">A√ß√µes</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -125,27 +223,20 @@
 														type="button" class="btn btn-warning" title="Editar">
 														<i class="fas fa-user-edit"></i>
 													</a> 
-													<a type="button" class="btn btn-danger" title="Exluir">
+													<button onclick="excluir('<%= p.getIdpessoa() %>','<%= p.getNome() %>')" 
+														type="button" class="btn btn-danger"  data-toggle="modal"
+														data-target="#modalExcluir"  title="Exluir">
 														<i class="fas fa-user-times"></i>
-													</a>
+													</button>
 												</div> 
 											</td>
 										</tr>
 										<%} %>
 									</tbody>
 								</table>
+								</div>
 							</div>
-							<!-- /.card-body -->
-							<div class="card-footer clearfix">
-								<ul class="pagination pagination-sm m-0 float-right">
-									<li class="page-item"><a class="page-link" href="#">´</a></li>
-									<li class="page-item"><a class="page-link" href="#">1</a></li>
-									<li class="page-item"><a class="page-link" href="#">2</a></li>
-									<li class="page-item"><a class="page-link" href="#">3</a></li>
-									<li class="page-item"><a class="page-link" href="#">ª</a></li>
-								</ul>
-							</div>
-						</div>
+						  </div> --%>
 						<!-- /.card -->
 					</div>
 					<!-- /.col -->
@@ -165,10 +256,10 @@
 					<!-- Add the bg color to the header using any of the bg-* classes -->
 					<div class="widget-user-header bg-info">
 						<div class="widget-user-image">
-							<img class="img-circle elevation-2 mr-2"
-								src="dist/img/user7-128x128.jpg" alt="User Avatar"> <br>
-							<h5 id="nome"></h5>
-							<p>
+							<img class="img-circle elevation-2 mr-2 ml-2"
+								src="dist/img/user9-128x128.png" alt="User Avatar" width="128"> <br>
+							<h4 id="nome"></h4>
+							<p align="left">
 								<b>CPF: </b><i id="cpf"></i> | 
 								<b>Nis: </b><i id="nis"></i>
 							</p>
@@ -186,14 +277,14 @@
 										<b>Sexo: </b><i id="sexo"></i><br>
 										<b>Estadocivil: </b><i id="estadocivil"></i><br>
 										<b>Escolaridade: </b><i id="escolaridade"></i><br>
-										<b>Profiss„o: </b><i id="profissao"></i><br>
+										<b>Profiss√£o: </b><i id="profissao"></i><br>
 										<b>Ocupacional: </b><i id="condicaoocupacao"></i><br>
 										<b>Zona: </b><i id="zonamoradia"></i><br>
 									</p>
 								</div>
 								<div class="col-sm-6">
 									<p>
-										<b>EndereÁo: </b><i id="logradouro"></i><br>
+										<b>Endere√ßo: </b><i id="logradouro"></i><br>
 										<b>N: </b><i id="numero"></i><br>
 										<b>Complemento: </b><i id="complemento"></i><br>
 										<b>Bairro: </b><i id="bairro"></i><br>
@@ -211,10 +302,51 @@
 			</div>
 		</div>
 
-		<script type="text/javascript">		
+
+		<!-- Modal Excluir-->
+		<div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog"
+			aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header bg-danger">
+						<h3 class="modal-title" id="modalExcluir">Aten√ß√£o!</h3>
+						<button type="button" class="close" data-dismiss="modal"
+							aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body" align="center">
+						<br>
+						<h4>Voc√™ deseja mesmo excluir o us√∫ario</h4>
+						<br>
+						<h4>
+							<i id="name"></i>
+						</h4>
+					</div>
+					<div class="modal-footer bg-light" >
+						<form action="index.jsp" method="post">
+							<input id="id" type="hidden">
+							<button type="submit" class="btn btn-danger">Excluir</button>
+							<button type="button" class="btn btn-secondary"
+								data-dismiss="modal">Sair</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>		
+
+		<script type="text/javascript">
+		
+		function excluir(id, name) {
+			
+			document.getElementById('id').innerHTML = id;
+			document.getElementById('name').innerHTML = name;
+			
+			console.log(id,nome);
+		}
 		
 			 function visualisar(idpessoa, nome, rg, cpf, nis, datanascimento, naturalidade, ufnascimento, sexo, foto, estadocivil, escolaridade, profissao, condicaoocupacao, zonamoradia, logradouro, numero, complemento, bairro, cep, cidade, ufcidade, email, telefonecelular,) {
-				 				 
+					 
 				//document.getElementById('id').innerHTML = idpessoa;
 				document.getElementById('nome').innerHTML = nome;
 				document.getElementById('rg').innerHTML = rg;
@@ -239,7 +371,7 @@
 				document.getElementById('ufcidade').innerHTML = ufcidade;
 				document.getElementById('email').innerHTML = email;
 				document.getElementById('telefonecelular').innerHTML = telefonecelular;
-			}  
+			}		 
 			
 		</script>
 

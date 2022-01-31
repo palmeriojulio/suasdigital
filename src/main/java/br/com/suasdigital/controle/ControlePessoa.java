@@ -49,4 +49,13 @@ public class ControlePessoa {
 		}
     	return pessoa;
     }
+	
+	// Controle edita pessoa.
+	public void ControleEditaPessoa(Pessoa pessoa) {
+		try {
+			rpessoa.EditaPessoa(pessoa);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
 }

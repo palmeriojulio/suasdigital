@@ -19,13 +19,13 @@ public class RepositorioPessoa {
 
 		Connection con = new ConnectionFactory().getConnection();
 		String sql = "INSERT INTO pessoa(idpessoa, nome, rg, cpf, nis, datanascimento, naturalidade, ufnascimento, sexo, foto,"
-				+ "estadocivil, escolaridade, profissao, condicaoocupacao, zonamoradia, logradouro, numero, complemento, bairro, cep, "
+				+ "estadocivil, escolaridade, profissao, condicaoocupacao, zonamoradia, logradouro, numero, complemento, bairro, cep,"
 				+ "cidade, ufcidade, email, telefonecelular) values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 
 		// Retorna o id que vai ser salvo no banco.
 		PreparedStatement stmp = (PreparedStatement) con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 		long idpessoa = 0;
-
+		
 		try {
 			stmp.setLong(1, pessoa.getIdpessoa());
 			stmp.setString(2, pessoa.getNome());
@@ -99,6 +99,7 @@ public class RepositorioPessoa {
 				pessoa.setNumero(rs.getString("numero"));
 				pessoa.setComplemento(rs.getString("complemento"));
 				pessoa.setBairro(rs.getString("bairro"));
+				pessoa.setCep(rs.getString("cep"));
 				pessoa.setCidade(rs.getString("cidade"));
 				pessoa.setUfcidade(rs.getString("ufcidade"));
 				pessoa.setEmail(rs.getString("email"));
@@ -143,6 +144,7 @@ public class RepositorioPessoa {
 				pessoa.setZonamoradia(rs.getString("zonamoradia"));
 				pessoa.setLogradouro(rs.getString("logradouro"));
 				pessoa.setNumero(rs.getString("numero"));
+				pessoa.setCep(rs.getString("cep"));
 				pessoa.setComplemento(rs.getString("complemento"));
 				pessoa.setBairro(rs.getString("bairro"));
 				pessoa.setCidade(rs.getString("cidade"));
@@ -159,6 +161,49 @@ public class RepositorioPessoa {
 
 		return pessoa;
 	}
-			
+	
+	// Atualiza aluno.
+	public void EditaPessoa(Pessoa pessoa) throws SQLException {
+		
+		Connection con = new ConnectionFactory().getConnection();
+		String sql = "UPDATE pessoa SET nome=?, rg=?, cpf=?, nis=?, datanascimento=?, naturalidade=?, ufnascimento=?, sexo=?, foto=?, "
+				+ "estadocivil=?, escolaridade=?, profissao=?, condicaoocupacao=?, zonamoradia=?, logradouro=?, numero=?, complemento=?, bairro=?, cep=?,"
+				+ "cidade=?, ufcidade=?, email=?, telefonecelular=? "
+				+ "WHERE idpessoa=?";
+		PreparedStatement stmp = (PreparedStatement) con.prepareStatement(sql);
+		
+		try {
+			stmp.setString(1, pessoa.getNome());
+			stmp.setString(2, pessoa.getRg());
+			stmp.setString(3, pessoa.getCpf());
+			stmp.setString(4, pessoa.getNis());
+			stmp.setString(5, pessoa.getDatanascimento());
+			stmp.setString(6, pessoa.getNaturalidade());
+			stmp.setString(7, pessoa.getUfnascimento());
+			stmp.setString(8, pessoa.getSexo());
+			stmp.setString(9, pessoa.getFoto());
+			stmp.setString(10, pessoa.getEstadocivil());
+			stmp.setString(11, pessoa.getEscolaridade());
+			stmp.setString(12, pessoa.getProfissao());
+			stmp.setString(13, pessoa.getCondicaoocupacao());
+			stmp.setString(14, pessoa.getZonamoradia());
+			stmp.setString(15, pessoa.getLogradouro());
+			stmp.setString(16, pessoa.getNumero());
+			stmp.setString(17, pessoa.getComplemento());
+			stmp.setString(18, pessoa.getBairro());
+			stmp.setString(19, pessoa.getCep());
+			stmp.setString(20, pessoa.getCidade());
+			stmp.setString(21, pessoa.getUfcidade());
+			stmp.setString(22, pessoa.getEmail());
+			stmp.setString(23, pessoa.getTelefonecelular());
+			stmp.setLong(24, pessoa.getIdpessoa());
+			System.out.println(stmp);
+			stmp.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			FecharConexao.FC(stmp, con);
+		}
+	}
 
 }

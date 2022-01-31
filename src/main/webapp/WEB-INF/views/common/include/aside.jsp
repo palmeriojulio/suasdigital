@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -13,10 +13,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="dist/img/user9-128x128.png" class="img-circle elevation-2" alt="User Image">
         </div> 
         <div class="info">
-          <a class="d-block">Palmério Júlio</a>
+          <a class="d-block">PalmÃ©rio JÃºlio</a>
         </div>
       </div>
 
@@ -31,7 +31,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>
-               Usuário Social
+               UsuÃ¡rio Social
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -54,19 +54,19 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
-                Famílias
+                FamÃ­lias
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/UI/general.html" class="nav-link">
+                <a href="familia_cadastrar.jsp" class="nav-link">
                   <i class="fa fa-user-plus nav-icon text-info ml-1"></i>
                   <p>Cadastar</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/UI/icons.html" class="nav-link">
+                <a href="familia_listar.jsp" class="nav-link">
                   <i class="fa fa-search nav-icon text-info ml-1"></i>
                   <p>Pesquisar</p>
                 </a>
@@ -74,19 +74,19 @@
               <li class="nav-item">
                 <a href="pages/UI/buttons.html" class="nav-link">
                   <i class="fa fa-users nav-icon text-info ml-1"></i>
-                  <p>Composição Família</p>
+                  <p>ComposiÃ§Ã£o FamÃ­lia</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/UI/sliders.html" class="nav-link">
                   <i class="fas fa-home nav-icon text-info ml-1"></i>
-                  <p>Condições Habitacionais</p>
+                  <p>CondiÃ§Ãµes Habitacionais</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/UI/modals.html" class="nav-link">
                   <i class="fas fa-pencil-alt nav-icon text-info ml-1"></i>
-                  <p>Condições Educacionais</p>
+                  <p>CondiÃ§Ãµes Educacionais</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -98,31 +98,31 @@
               <li class="nav-item">
                 <a href="pages/UI/timeline.html" class="nav-link">
                   <i class="fas fa-people-carry nav-icon text-info ml-1"></i>
-                  <p>Condições de Trabalho</p>
+                  <p>CondiÃ§Ãµes de Trabalho</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/UI/ribbons.html" class="nav-link">
                   <i class="far fa-money-bill-alt nav-icon text-info ml-1"></i>
-                  <p>Renda Famíliar</p>
+                  <p>Renda FamÃ­liar</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/UI/ribbons.html" class="nav-link">
                   <i class="fas fa-heartbeat nav-icon text-info ml-1"></i>
-                  <p>Condições de Saúde</p>
+                  <p>CondiÃ§Ãµes de SaÃºde</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/UI/ribbons.html" class="nav-link">
                   <i class="fas fa-first-aid nav-icon text-info ml-1"></i>
-                  <p>Bolsa Saúde</p>
+                  <p>Bolsa SaÃºde</p>
                 </a>
               </li>               
               <li class="nav-item">
                 <a href="pages/UI/ribbons.html" class="nav-link">
                 <i class="fas fa-money-check-alt nav-icon text-info ml-1"></i>
-                  <p>Benefícios Eventuais</p>
+                  <p>BenefÃ­cios Eventuais</p>
                 </a>
               </li>              
             </ul>
@@ -140,7 +140,7 @@
                 <a href="#" class="nav-link">
                   <i class="fas fa-fist-raised nav-icon text-info ml-1"></i>                  
                   <p>
-                    Situações de Violência                    
+                    SituaÃ§Ãµes de ViolÃªncia                    
                     <i class="right fas fa-angle-left"></i>
                   </p>
                 </a>
@@ -200,7 +200,7 @@
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-handshake"></i>
               <p>
-                Benefícios Eventuais
+                BenefÃ­cios Eventuais
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>            
@@ -208,43 +208,43 @@
               <li class="nav-item">
                 <a href="pages/tables/simple.html" class="nav-link">
                   <i class="fas fa-house-user nav-icon text-info ml-1"></i>	
-                  <p>Auxílio Aluguel</p>
+                  <p>AuxÃ­lio Aluguel</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/tables/data.html" class="nav-link">
                   <i class="fas fa-baby nav-icon text-info ml-1"></i>
-                  <p>Auxílio Leite</p>
+                  <p>AuxÃ­lio Leite</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/tables/jsgrid.html" class="nav-link">
                   <i class="fas fa-hands-helping nav-icon text-info ml-1"></i>
-                  <p>Auxílio Emergência</p>
+                  <p>AuxÃ­lio EmergÃªncia</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/tables/jsgrid.html" class="nav-link">
                   <i class="fas fa-baby-carriage nav-icon text-info ml-1"></i>
-                  <p>Auxílio Natalidade</p>
+                  <p>AuxÃ­lio Natalidade</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/tables/jsgrid.html" class="nav-link">
                   <i class="fas fa-skull-crossbones nav-icon text-info ml-1"></i>
-                  <p>Auxílio Funeral</p>
+                  <p>AuxÃ­lio Funeral</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/tables/jsgrid.html" class="nav-link">
                   <i class="fas fa-utensils nav-icon text-info ml-1"></i>
-                  <p>Cesta Básica</p>
+                  <p>Cesta BÃ¡sica</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="pages/tables/jsgrid.html" class="nav-link">
                   <i class="fas fa-child nav-icon text-info ml-1"></i>
-                  <p>Criança Feliz</p>
+                  <p>CrianÃ§a Feliz</p>
                 </a>
               </li>
             </ul>
@@ -308,7 +308,7 @@
                   <li class="nav-item">
                     <a href="#" class="nav-link">
                       <i class="far fa-dot-circle nav-icon"></i>
-                      <p>Matricular Usuário</p>
+                      <p>Matricular UsuÃ¡rio</p>
                     </a>
                   </li>                  
                 </ul>
@@ -386,17 +386,17 @@
           </li>
           
           
-          <li class="nav-header">CONFIGURAÇÕES</li>
+          <li class="nav-header">CONFIGURAÃ‡Ã•ES</li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-circle text-danger"></i>
-              <p class="text">Adcionar Usuário</p>
+              <p class="text">Adcionar operador</p>
             </a>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa-circle text-warning"></i>
-              <p>Relatórios</p>
+              <p>RelatÃ³rios</p>
             </a>
           </li>
           <li class="nav-item">

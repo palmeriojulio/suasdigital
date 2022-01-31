@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -21,14 +21,14 @@
       <li class="nav-item dropdown user-menu">
         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
           <img src="dist/img/user9-128x128.png" class="user-image img-circle elevation-3" alt="User Image">
-          <span class="d-none d-md-inline">Palmério Júlio</span>
+          <span class="d-none d-md-inline">PalmÃ©rio JÃºlio</span>
         </a>
         <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
           <!-- User image -->
           <li class="user-header bg-secondary">
             <img src="dist/img/user9-128x128.png" class="img-circle elevation-3" alt="User Image">
             <p>
-              Palmério Júlio - Programador Java
+              PalmÃ©rio JÃºlio - Programador Java
               <small>06 de Janeiro de 2022</small>
             </p>
           </li>         

@@ -10,22 +10,23 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.suasdigital.controle.Facade;
 import br.com.suasdigital.modelo.Pessoa;
 
-@WebServlet("/ServletCadastroPessoa")
-public class ServletCadastroPessoa extends HttpServlet {
+@WebServlet("/ServletEditarPessoa")
+public class ServletEditarPessoa extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
-    public ServletCadastroPessoa() {
+    
+    public ServletEditarPessoa() {
         super();
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-			
+		
 		Pessoa pessoa = new Pessoa();
+		pessoa.setIdpessoa(Long.parseLong(request.getParameter("idpessoa")));
 		pessoa.setNome(request.getParameter("nome").replace("<", "").replace(">", "").trim());
 		pessoa.setRg(request.getParameter("rg").replace("<", "").replace(">", "").trim());
 		pessoa.setCpf(request.getParameter("cpf").replace("<", "").replace(">", "").trim());
 		pessoa.setNis(request.getParameter("nis").replace("<", "").replace(">", "").trim());
-		pessoa.setDatanascimento(request.getParameter("datanascimento"));		
+		pessoa.setDatanascimento(request.getParameter("datanascimento"));
 		pessoa.setNaturalidade(request.getParameter("naturalidade").replace("<", "").replace(">", "").trim());
 		pessoa.setUfnascimento(request.getParameter("ufnascimento").replace("<", "").replace(">", "").trim());
 		pessoa.setSexo(request.getParameter("sexo"));
@@ -41,7 +42,7 @@ public class ServletCadastroPessoa extends HttpServlet {
 			|| request.getParameter("numero").equalsIgnoreCase("SN")
 			|| request.getParameter("numero").equalsIgnoreCase("S/N") 
 			|| request.getParameter("numero").equalsIgnoreCase("S N")) {
-			pessoa.setNumero("S/Nº");
+			pessoa.setNumero("S/N°");
 		} else {
 			pessoa.setNumero(request.getParameter("numero").replace("<", "").replace(">", "").trim());
 		}
@@ -52,11 +53,11 @@ public class ServletCadastroPessoa extends HttpServlet {
 		pessoa.setCidade(request.getParameter("cidade").replace("<", "").replace(">", "").trim());
 		pessoa.setUfcidade(request.getParameter("ufcidade").replace("<", "").replace(">", "").trim());
 		pessoa.setEmail(request.getParameter("email").replace("<", "").replace(">", "").toLowerCase().trim());
-		pessoa.setTelefonecelular(request.getParameter("telefonecelular").replace("<", "").replace(">", "").trim());		  
-			
-		//cadastra pessoa.
-		Facade.getInstance().getControlePessoa().ControleCadastraPessoa(pessoa);
+		pessoa.setTelefonecelular(request.getParameter("telefonecelular").replace("<", "").replace(">", "").trim());
+						
+		Facade.getInstance().getControlePessoa().ControleEditaPessoa(pessoa);
 		
-		response.sendRedirect(request.getContextPath()+"/usuario_social_cadastrar.jsp?status=1");
-	}	
+		response.sendRedirect(request.getContextPath()+"/usuario_social_listar.jsp?idpessoa="+pessoa.getIdpessoa()+"&status=1");
+	}
+
 }

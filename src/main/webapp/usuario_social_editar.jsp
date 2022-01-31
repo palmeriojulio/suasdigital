@@ -1,11 +1,11 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
     
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="pt_br">
+<html>
 <head>
 	<%@include file="/WEB-INF/views/common/include/meta.jsp"%>
-  	<title>Editar Usuário Social</title>  
+  	<title>Editar UsuÃ¡rio Social</title>  
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -24,12 +24,12 @@
       <div class="container-fluid">
         <div class="row mb-2">         	
           <div class="col-sm-6">         
-          	<h1><i class="fas fa-user mr-3 ml-2"></i></i>Editar Usuário Social</h1>
+          	<h1><i class="fas fa-user mr-3 ml-2"></i></i>Editar UsuÃ¡rio Social</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#"> Usuário Social</a></li>
-              <li class="breadcrumb-item active">Editar Usuário Social</li>
+              <li class="breadcrumb-item"><a href="#"> UsuÃ¡rio Social</a></li>
+              <li class="breadcrumb-item active">Editar UsuÃ¡rio Social</li>
             </ol>
           </div>
         </div>
@@ -54,6 +54,36 @@
   <!-- scripts -->
   <%@include file="/WEB-INF/views/common/include/script.jsp"%>
   <!-- /scripts -->
+  
+   <!-- Mascaras -->
+  <script type="text/javascript">
+	
+  	$("input[id*='telefonecelular']").inputmask({
+		mask : [ '99-99999-9999' ],
+		keepStatic : true
+	});
+  	
+  	$("input[id*='rg']").inputmask({
+		mask : [ '9.999.999' ],
+		keepStatic : true
+	});
+  	
+  	$("input[id*='cpf']").inputmask({
+		mask : [ '999.999.999-99' ],
+		keepStatic : true
+	});
+	
+  	$("input[id*='nis']").inputmask({
+		mask : [ '99999999999' ],
+		keepStatic : true
+	});
+  	
+  	$("input[id*='cep']").inputmask({
+		mask : [ '99999-999' ],
+		keepStatic : true
+	});
+  	
+  </script>
 
 </body>
 </html>

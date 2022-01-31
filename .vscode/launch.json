@@ -1,0 +1,854 @@
+{
+    // Use o IntelliSense para saber mais sobre os atributos possíveis.
+    // Focalizar para exibir as descrições dos atributos existentes.
+    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tool",
+            "request": "launch",
+            "mainClass": "antlr.Tool",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tool(1)",
+            "request": "launch",
+            "mainClass": "antlr.build.Tool",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch ASTFrame",
+            "request": "launch",
+            "mainClass": "antlr.debug.misc.ASTFrame",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tool(2)",
+            "request": "launch",
+            "mainClass": "antlr.preprocessor.Tool",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch GreekAlphabetFactory",
+            "request": "launch",
+            "mainClass": "com.lowagie.text.factories.GreekAlphabetFactory",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch RomanAlphabetFactory",
+            "request": "launch",
+            "mainClass": "com.lowagie.text.factories.RomanAlphabetFactory",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch RomanNumberFactory",
+            "request": "launch",
+            "mainClass": "com.lowagie.text.factories.RomanNumberFactory",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pfm2afm",
+            "request": "launch",
+            "mainClass": "com.lowagie.text.pdf.Pfm2afm",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Base64",
+            "request": "launch",
+            "mainClass": "com.lowagie.text.pdf.codec.Base64",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch CMapParser",
+            "request": "launch",
+            "mainClass": "com.lowagie.text.pdf.fonts.cmaps.CMapParser",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimplePatternParser",
+            "request": "launch",
+            "mainClass": "com.lowagie.text.pdf.hyphenation.SimplePatternParser",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch PdfContentReaderTool",
+            "request": "launch",
+            "mainClass": "com.lowagie.text.pdf.parser.PdfContentReaderTool",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch BuildTutorial",
+            "request": "launch",
+            "mainClass": "com.lowagie.tools.BuildTutorial",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch ConcatPdf",
+            "request": "launch",
+            "mainClass": "com.lowagie.tools.ConcatPdf",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch EncryptPdf",
+            "request": "launch",
+            "mainClass": "com.lowagie.tools.EncryptPdf",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch HandoutPdf",
+            "request": "launch",
+            "mainClass": "com.lowagie.tools.HandoutPdf",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch SplitPdf",
+            "request": "launch",
+            "mainClass": "com.lowagie.tools.SplitPdf",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch ToolboxAvailable",
+            "request": "launch",
+            "mainClass": "com.lowagie.tools.ToolboxAvailable",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch TimezoneDump",
+            "request": "launch",
+            "mainClass": "com.mysql.cj.jdbc.admin.TimezoneDump",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch DocsConnectionPropsHelper",
+            "request": "launch",
+            "mainClass": "com.mysql.jdbc.DocsConnectionPropsHelper",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch ErrorMappingsDocGenerator",
+            "request": "launch",
+            "mainClass": "com.mysql.jdbc.util.ErrorMappingsDocGenerator",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch PropertiesDocGenerator",
+            "request": "launch",
+            "mainClass": "com.mysql.jdbc.util.PropertiesDocGenerator",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch TimezoneDump(1)",
+            "request": "launch",
+            "mainClass": "com.mysql.jdbc.util.TimezoneDump",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch VersionFSHierarchyMaker",
+            "request": "launch",
+            "mainClass": "com.mysql.jdbc.util.VersionFSHierarchyMaker",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Base64Decoder",
+            "request": "launch",
+            "mainClass": "com.oreilly.servlet.Base64Decoder",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Base64Encoder",
+            "request": "launch",
+            "mainClass": "com.oreilly.servlet.Base64Encoder",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch AstBrowser",
+            "request": "launch",
+            "mainClass": "groovy.inspect.swingui.AstBrowser",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch AstNodeToScriptAdapter",
+            "request": "launch",
+            "mainClass": "groovy.inspect.swingui.AstNodeToScriptAdapter",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch ObjectBrowser",
+            "request": "launch",
+            "mainClass": "groovy.inspect.swingui.ObjectBrowser",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch GroovyShell",
+            "request": "launch",
+            "mainClass": "groovy.lang.GroovyShell",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Console",
+            "request": "launch",
+            "mainClass": "groovy.ui.Console",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch ConsoleActions",
+            "request": "launch",
+            "mainClass": "groovy.ui.ConsoleActions",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch ConsoleView",
+            "request": "launch",
+            "mainClass": "groovy.ui.ConsoleView",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch GroovyMain",
+            "request": "launch",
+            "mainClass": "groovy.ui.GroovyMain",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch BasicContentPane",
+            "request": "launch",
+            "mainClass": "groovy.ui.view.BasicContentPane",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch BasicMenuBar",
+            "request": "launch",
+            "mainClass": "groovy.ui.view.BasicMenuBar",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch BasicStatusBar",
+            "request": "launch",
+            "mainClass": "groovy.ui.view.BasicStatusBar",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch BasicToolBar",
+            "request": "launch",
+            "mainClass": "groovy.ui.view.BasicToolBar",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Defaults",
+            "request": "launch",
+            "mainClass": "groovy.ui.view.Defaults",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch GTKDefaults",
+            "request": "launch",
+            "mainClass": "groovy.ui.view.GTKDefaults",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch MacOSXDefaults",
+            "request": "launch",
+            "mainClass": "groovy.ui.view.MacOSXDefaults",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch MacOSXMenuBar",
+            "request": "launch",
+            "mainClass": "groovy.ui.view.MacOSXMenuBar",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch WindowsDefaults",
+            "request": "launch",
+            "mainClass": "groovy.ui.view.WindowsDefaults",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch GroovyScriptEngine",
+            "request": "launch",
+            "mainClass": "groovy.util.GroovyScriptEngine",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch GroovyTestSuite",
+            "request": "launch",
+            "mainClass": "groovy.util.GroovyTestSuite",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch JavadocAssertionTestSuite",
+            "request": "launch",
+            "mainClass": "groovy.util.JavadocAssertionTestSuite",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tool(3)",
+            "request": "launch",
+            "mainClass": "groovyjarjarantlr.Tool",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tool(4)",
+            "request": "launch",
+            "mainClass": "groovyjarjarantlr.build.Tool",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch ASTFrame(1)",
+            "request": "launch",
+            "mainClass": "groovyjarjarantlr.debug.misc.ASTFrame",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tool(5)",
+            "request": "launch",
+            "mainClass": "groovyjarjarantlr.preprocessor.Tool",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch CtClass",
+            "request": "launch",
+            "mainClass": "javassist.CtClass",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Loader",
+            "request": "launch",
+            "mainClass": "javassist.Loader",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Dump",
+            "request": "launch",
+            "mainClass": "javassist.tools.Dump",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch framedump",
+            "request": "launch",
+            "mainClass": "javassist.tools.framedump",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Compiler",
+            "request": "launch",
+            "mainClass": "javassist.tools.reflect.Compiler",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Loader(1)",
+            "request": "launch",
+            "mainClass": "javassist.tools.reflect.Loader",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Viewer",
+            "request": "launch",
+            "mainClass": "javassist.tools.web.Viewer",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Webserver",
+            "request": "launch",
+            "mainClass": "javassist.tools.web.Webserver",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch JRApiWriter",
+            "request": "launch",
+            "mainClass": "net.sf.jasperreports.engine.util.JRApiWriter",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch JasperDesignViewer",
+            "request": "launch",
+            "mainClass": "net.sf.jasperreports.view.JasperDesignViewer",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch JasperViewer",
+            "request": "launch",
+            "mainClass": "net.sf.jasperreports.view.JasperViewer",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "org.apache.log4j.chainsaw.Main",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch PropertyPrinter",
+            "request": "launch",
+            "mainClass": "org.apache.log4j.config.PropertyPrinter",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch LF5Appender",
+            "request": "launch",
+            "mainClass": "org.apache.log4j.lf5.LF5Appender",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch StartLogFactor5",
+            "request": "launch",
+            "mainClass": "org.apache.log4j.lf5.StartLogFactor5",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch JMSSink",
+            "request": "launch",
+            "mainClass": "org.apache.log4j.net.JMSSink",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch SimpleSocketServer",
+            "request": "launch",
+            "mainClass": "org.apache.log4j.net.SimpleSocketServer",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch SocketServer",
+            "request": "launch",
+            "mainClass": "org.apache.log4j.net.SocketServer",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Roller",
+            "request": "launch",
+            "mainClass": "org.apache.log4j.varia.Roller",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Version",
+            "request": "launch",
+            "mainClass": "org.apache.poi.Version",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch EscherDump",
+            "request": "launch",
+            "mainClass": "org.apache.poi.ddf.EscherDump",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch RecordGenerator",
+            "request": "launch",
+            "mainClass": "org.apache.poi.dev.RecordGenerator",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch HPSFPropertiesExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hpsf.extractor.HPSFPropertiesExtractor",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch PropertyIDMap",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hpsf.wellknown.PropertyIDMap",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch BiffDrawingToXml",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.BiffDrawingToXml",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch BiffViewer",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.BiffViewer",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch EFBiffViewer",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.EFBiffViewer",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch FormulaViewer",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.FormulaViewer",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch ReSave",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.ReSave",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch RecordLister",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.dev.RecordLister",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch ExcelExtractor",
+            "request": "launch",
+            "mainClass": "org.apache.poi.hssf.extractor.ExcelExtractor",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSDump",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.dev.POIFSDump",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSHeaderDumper",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.dev.POIFSHeaderDumper",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSLister",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.dev.POIFSLister",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSViewer",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.dev.POIFSViewer",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSReader",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.eventfilesystem.POIFSReader",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch NPOIFSFileSystem",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.filesystem.NPOIFSFileSystem",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch POIFSFileSystem",
+            "request": "launch",
+            "mainClass": "org.apache.poi.poifs.filesystem.POIFSFileSystem",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch DrawingDump",
+            "request": "launch",
+            "mainClass": "org.apache.poi.util.DrawingDump",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch FontMetricsDumper",
+            "request": "launch",
+            "mainClass": "org.apache.poi.util.FontMetricsDumper",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch HexDump",
+            "request": "launch",
+            "mainClass": "org.apache.poi.util.HexDump",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch XmlParser",
+            "request": "launch",
+            "mainClass": "org.apache.struts.tiles.xmlDefinition.XmlParser",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Version(1)",
+            "request": "launch",
+            "mainClass": "org.apache.taglibs.standard.Version",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch ELParser",
+            "request": "launch",
+            "mainClass": "org.apache.taglibs.standard.lang.jstl.parser.ELParser",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch FileSystemCompilerFacade",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.ant.FileSystemCompilerFacade",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Groovy",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.ant.Groovy",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch LexerFrame",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.antlr.LexerFrame",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main(1)",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.antlr.Main",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Java2GroovyMain",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.antlr.java.Java2GroovyMain",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch genArrayAccess",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.classgen.genArrayAccess",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch genArrays",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.classgen.genArrays",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch genDgmMath",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.classgen.genDgmMath",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch genMathModification",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.classgen.genMathModification",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch DgmConverter",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.tools.DgmConverter",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch DocGenerator",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.tools.DocGenerator",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch FileSystemCompiler",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.tools.FileSystemCompiler",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch GrapeMain",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.tools.GrapeMain",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch GroovyStarter",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.tools.GroovyStarter",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main(2)",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.tools.shell.Main",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch DomToGroovy",
+            "request": "launch",
+            "mainClass": "org.codehaus.groovy.tools.xml.DomToGroovy",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch TestMethods",
+            "request": "launch",
+            "mainClass": "org.directwebremoting.TestMethods",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Version(2)",
+            "request": "launch",
+            "mainClass": "org.hibernate.Version",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch DB2Dialect",
+            "request": "launch",
+            "mainClass": "org.hibernate.dialect.DB2Dialect",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch CustomVersionOneStrategy",
+            "request": "launch",
+            "mainClass": "org.hibernate.id.uuid.CustomVersionOneStrategy",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Helper",
+            "request": "launch",
+            "mainClass": "org.hibernate.id.uuid.Helper",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch SchemaExport",
+            "request": "launch",
+            "mainClass": "org.hibernate.tool.hbm2ddl.SchemaExport",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch SchemaUpdate",
+            "request": "launch",
+            "mainClass": "org.hibernate.tool.hbm2ddl.SchemaUpdate",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch SchemaValidator",
+            "request": "launch",
+            "mainClass": "org.hibernate.tool.hbm2ddl.SchemaValidator",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Base64Decoder(1)",
+            "request": "launch",
+            "mainClass": "org.w3c.tools.codec.Base64Decoder",
+            "projectName": "suasdigital"
+        },
+        {
+            "type": "java",
+            "name": "Launch Base64Encoder(1)",
+            "request": "launch",
+            "mainClass": "org.w3c.tools.codec.Base64Encoder",
+            "projectName": "suasdigital"
+        }
+    ]
+}
